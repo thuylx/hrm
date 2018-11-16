@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.hrm.web.leaverequest.LeaveRequestBrowse"
+        focusComponent="leaveRequestsTable"
+        lookupComponent="leaveRequestsTable"
+        messagesPack="com.company.hrm.web.leaverequest">
+    <dsContext>
+        <groupDatasource id="leaveRequestsDs"
+                         class="com.company.hrm.entity.LeaveRequest"
+                         view="leaveRequest-view">
+            <query>
+                <![CDATA[select e from hrm$LeaveRequest e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="leaveRequestsTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="leaveRequestsTable"
+                datasource="leaveRequestsDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="leaveRequestsTable"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="requester"/>
+                <column id="reason"/>
+                <column id="beginDate"/>
+                <column id="endDate"/>
+                <column id="status"/>
+                <column id="locked"/>
+            </columns>
+            <rows datasource="leaveRequestsDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="leaveRequestsTable.create"/>
+                <button id="editBtn"
+                        action="leaveRequestsTable.edit"/>
+                <button id="removeBtn"
+                        action="leaveRequestsTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>

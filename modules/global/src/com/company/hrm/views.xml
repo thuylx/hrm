@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<views xmlns="http://schemas.haulmont.com/cuba/view.xsd">
+    <view class="com.company.hrm.entity.OrgUnit"
+          extends="_local"
+          name="orgUnit-edit">
+        <property name="parent"
+                  view="_minimal"/>
+        <property name="supervisor"
+                  view="_minimal"/>
+        <property name="manager"
+                  view="_minimal"/>
+        <property name="orgLevel"
+                  view="_minimal"/>
+    </view>
+    <view class="com.company.hrm.entity.Employee"
+          extends="_local"
+          name="employee-browse">
+        <property name="user"
+                  view="_minimal"/>
+        <property name="managingOrgUnits"
+                  view="_minimal"/>
+        <property name="supervisingOrgUnits"
+                  view="_minimal"/>
+        <property name="orgUnit"
+                  view="_minimal">
+        </property>
+    </view>
+    <view class="com.company.hrm.entity.Employee"
+          extends="_local"
+          name="employee-edit">
+        <property name="user"
+                  view="_minimal"/>
+        <property name="orgUnit"
+                  view="_minimal"/>
+    </view>
+    <view class="com.company.hrm.entity.OrgUnit"
+          extends="_local"
+          name="orgUnit-browse">
+        <property name="parent"
+                  view="_minimal"/>
+        <property name="supervisor"
+                  view="_minimal"/>
+        <property name="manager"
+                  view="_minimal"/>
+        <property name="orgLevel"
+                  view="_minimal"/>
+    </view>
+    <view class="com.company.hrm.entity.LeaveRequest"
+          extends="_local"
+          name="leaveRequest-view">
+        <property name="requester"
+                  view="_minimal"/>
+    </view>
+</views>

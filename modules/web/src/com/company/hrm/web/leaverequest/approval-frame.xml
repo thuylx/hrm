@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.company.hrm.web.leaverequest.ApprovalFrame"
+        messagesPack="com.company.hrm.web.leaverequest">
+    <dsContext>
+        <datasource id="leaveRequestDs"
+                    class="com.company.hrm.entity.LeaveRequest"
+                    view="leaveRequest-view">
+            <datasource id="requesterDs"
+                        property="requester"/>
+        </datasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout spacing="true">
+        <fieldGroup id="requestFieldGroup"
+                    datasource="leaveRequestDs"
+                    editable="false">
+            <column width="250px">
+                <field property="requester"/>
+                <field property="reason"/>
+                <field property="beginDate"/>
+                <field property="endDate"/>
+                <field property="status"/>
+            </column>
+        </fieldGroup>
+        <checkBox id="approvalCheckBox"
+                  caption="Approve"/>
+    </layout>
+</window>

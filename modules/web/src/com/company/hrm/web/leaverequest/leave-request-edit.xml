@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.company.hrm.web.leaverequest.LeaveRequestEdit"
+        datasource="leaveRequestDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.company.hrm.web.leaverequest">
+    <dsContext>
+        <datasource id="leaveRequestDs"
+                    class="com.company.hrm.entity.LeaveRequest"
+                    view="leaveRequest-view">
+            <datasource id="requesterDs"
+                        property="requester"/>
+        </datasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            margin="true,false,false,false"
+            spacing="true">
+        <buttonsPanel id="processPanel"/>
+        <buttonsPanel id="taskPanel"/>
+        <fieldGroup id="fieldGroup"
+                    datasource="leaveRequestDs">
+            <column width="250px">
+                <field property="requester"/>
+                <field property="reason"
+                       rows="5"/>
+                <field property="beginDate"/>
+                <field property="endDate"/>
+                <field editable="false"
+                       property="status"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="extendedEditWindowActions"/>
+    </layout>
+</window>

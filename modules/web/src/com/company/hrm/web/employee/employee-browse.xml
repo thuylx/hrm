@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd" caption="msg://browseCaption"
+        class="com.company.hrm.web.employee.EmployeeBrowse" focusComponent="employeesTable"
+        lookupComponent="employeesTable" messagesPack="com.company.hrm.web.employee">
+    <dsContext>
+        <groupDatasource id="employeesDs" class="com.company.hrm.entity.Employee" view="employee-browse">
+            <query><![CDATA[select e from hrm$Employee e
+order by e.orgUnit.order, e.orgUnit.title, e.firstName]]></query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600" width="800"/>
+    <layout expand="employeesTable" spacing="true">
+        <filter id="filter" applyTo="employeesTable" datasource="employeesDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="employeesTable" multiLineCells="true" responsive="true" width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <group>
+                    <column id="orgUnit" caption=" " groupAllowed="true" width="1"/>
+                </group>
+                <column id="code"/>
+                <column id="firstName"/>
+                <column id="lastName"/>
+                <column id="managingOrgUnits"/>
+                <column id="supervisingOrgUnits"/>
+                <column id="userName"/>
+            </columns>
+            <rows datasource="employeesDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel" alwaysVisible="true">
+                <button id="createBtn" action="employeesTable.create"/>
+                <button id="editBtn" action="employeesTable.edit"/>
+                <button id="removeBtn" action="employeesTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>

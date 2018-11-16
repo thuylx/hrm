@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<screen-config xmlns="http://schemas.haulmont.com/cuba/screens.xsd">
+    <screen id="hrm$Employee.browse"
+            template="com/company/hrm/web/employee/employee-browse.xml"/>
+    <screen id="hrm$Employee.edit"
+            template="com/company/hrm/web/employee/employee-edit.xml"/>
+    <screen id="hrm$OrgUnit.browse"
+            template="com/company/hrm/web/orgunit/org-unit-browse.xml"/>
+    <screen id="hrm$OrgUnit.edit"
+            template="com/company/hrm/web/orgunit/org-unit-edit.xml"/>
+    <screen id="hrm$OrgLevel.browse"
+            template="com/company/hrm/web/orglevel/org-level-browse.xml"/>
+    <screen id="hrm$OrgLevel.edit"
+            template="com/company/hrm/web/orglevel/org-level-edit.xml"/>
+    <screen id="sec$User.edit"
+            template="com/company/hrm/web/employee/ext-user-edit.xml"/>
+    <screen id="hrm$LeaveRequest.browse"
+            template="com/company/hrm/web/leaverequest/leave-request-browse.xml"/>
+    <screen id="hrm$LeaveRequest.edit"
+            template="com/company/hrm/web/leaverequest/leave-request-edit.xml"/>
+    <screen id="hrm$ApprovalFrame"
+            template="com/company/hrm/web/leaverequest/approval-frame.xml"/>
+</screen-config>

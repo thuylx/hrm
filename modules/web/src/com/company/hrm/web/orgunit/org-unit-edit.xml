@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.company.hrm.web.orgunit.OrgUnitEdit"
+        datasource="orgUnitDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.company.hrm.web.orgunit">
+    <dsContext>
+        <datasource id="orgUnitDs"
+                    class="com.company.hrm.entity.OrgUnit"
+                    view="orgUnit-edit"/>
+        <collectionDatasource id="orgLevelsDs"
+                              class="com.company.hrm.entity.OrgLevel"
+                              view="_minimal">
+            <query>
+                <![CDATA[select e from hrm$OrgLevel e
+where e.active = TRUE
+order by e.order]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="orgUnitDs">
+            <column width="250px">
+                <field property="code"/>
+                <field property="name"/>
+                <field property="description"/>
+                <field property="parent"/>
+                <field property="manager"/>
+                <field property="supervisor"/>
+                <field property="title"/>
+                <field optionsDatasource="orgLevelsDs"
+                       property="orgLevel"/>
+                <field property="order"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

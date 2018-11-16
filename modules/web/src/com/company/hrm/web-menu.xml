@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
+    <menu id="application-hrm" insertBefore="administration">
+        <item screen="hrm$Employee.browse"/>
+        <item screen="hrm$OrgUnit.browse"/>
+        <item screen="hrm$OrgLevel.browse"/>
+        <item screen="hrm$LeaveRequest.browse"/>
+    </menu>
+</menu-config>
