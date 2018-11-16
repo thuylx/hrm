@@ -1,2 +1,0 @@
-JAVA_VERSION="10.0.1"
-MODULES="java.base animal.sniffer.annotations checker.qual java.compiler error.prone.annotations j2objc.annotations java.logging java.xml com.google.common java.sql commons.lang commons.logging commons.configuration jdk.unsupported gson jansi jcommander jdk.jdwp.agent jdk.zipfs jline kotlin.stdlib kodein.di.core.jvm kodein.di.generic.jvm kotlin.reflect kotlin.stdlib.jdk7 kotlin.stdlib.jdk8 practicalxml commons.collections velocity com.haulmont.cuba.cli"
