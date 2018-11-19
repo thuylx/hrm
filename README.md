@@ -11,16 +11,16 @@ This will be useful in case of, for example, approval process which we need dete
 
 1. `code`: String, human readable identity for the org level. Example of `OrgLevel code`:
 
-* COM: all of Company
-* FUNC: Function
-* DEPT: Department
-* GROUP: Work Group
-* TEAM: Working Team
+    * COM: all of Company
+    * FUNC: Function
+    * DEPT: Department
+    * GROUP: Work Group
+    * TEAM: Working Team
 
-For example, we can refer to these level using code as below:
-
-`${hrm.getManagerUserName("DEPT", starter)}`: get user login name (string) of department head of given username stored in `starter` process variable.  
-See functions provided by `hrm` bean in "Organizational structure query" section below.
+    For example, we can refer to these level using code as below:
+    
+    `${hrm.getManagerUserName("DEPT", starter)}`: get user login name (string) of department head of given username stored in `starter` process variable.  
+    See functions provided by `hrm` bean in "Organizational structure query" section below.
 
 2. `name`
 3. `order`: precedence number to short and display in the list. Usually the smaller mean higher level.
