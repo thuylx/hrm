@@ -56,6 +56,12 @@
     <class>com.haulmont.cuba.core.entity.JmxInstance</class>
     <class>com.haulmont.cuba.security.entity.RememberMeToken</class>
     <class>com.haulmont.cuba.core.entity.ReferenceToEntity</class>
+    <class>vn.tki.erp.cambpm.entity.BpmProcessDefinition</class>
+    <class>vn.tki.erp.cambpm.entity.BpmProcessDefinitionEntity</class>
+    <class>vn.tki.erp.cambpm.entity.BpmTaskList</class>
+    <class>vn.tki.erp.cambpm.entity.BpmTaskListFilter</class>
+    <class>vn.tki.erp.cambpm.entity.BpmProcessDefinitionGroup</class>
+    <class>vn.tki.erp.cambpm.entity.NewEntity</class>
     <class>com.company.hrm.entity.OrgUnit</class>
     <class>com.company.hrm.entity.Employee</class>
     <class>com.company.hrm.entity.OrgUnitHierarchy</class>

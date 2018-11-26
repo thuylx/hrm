@@ -33,8 +33,6 @@ public class TaskQueryTest {
         metadata = cont.metadata();
         persistence = cont.persistence();
         dataManager = AppBeans.get(DataManager.class);
-        CamPlatformImpl camPlatform = AppBeans.get(CamPlatformImpl.class);
-        camPlatform.initialize();
         processEngine = AppBeans.get(CamPlatformImpl.class).getProcessEngine();
     }
 
@@ -57,6 +55,6 @@ public class TaskQueryTest {
                 .orderByTaskCreateTime()
                 .asc()
                 .list();
-        assertEquals(0, bpmTasks.size());
+        assertEquals(1, bpmTasks.size());
     }
 }

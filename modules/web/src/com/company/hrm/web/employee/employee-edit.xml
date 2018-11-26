@@ -1,32 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        caption="msg://editorCaption"
-        class="com.company.hrm.web.employee.EmployeeEdit"
-        datasource="employeeDs"
-        focusComponent="fieldGroup"
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd" caption="msg://editorCaption"
+        class="com.company.hrm.web.employee.EmployeeEdit" datasource="employeeDs" focusComponent="fieldGroup"
         messagesPack="com.company.hrm.web.employee">
     <dsContext>
-        <datasource id="employeeDs"
-                    class="com.company.hrm.entity.Employee"
-                    view="employee-edit"/>
+        <datasource id="employeeDs" class="com.company.hrm.entity.Employee" view="employee-edit"/>
     </dsContext>
-    <dialogMode height="600"
-                width="800"/>
-    <layout expand="windowActions"
-            spacing="true">
-        <fieldGroup id="fieldGroup"
-                    datasource="employeeDs"
-                    width="100%">
+    <dialogMode height="600" width="800"/>
+    <layout expand="windowActions" spacing="true">
+        <fieldGroup id="fieldGroup" datasource="employeeDs" width="100%">
             <column>
                 <field property="firstName"/>
                 <field property="lastName"/>
                 <field property="user"/>
-                <field property="orgUnit"
-                       width="50%"/>
+                <field property="orgUnit" width="50%"/>
                 <field property="code"/>
             </column>
         </fieldGroup>
-        <frame id="windowActions"
-               screen="editWindowActions"/>
+        <frame id="windowActions" screen="editWindowActions"/>
     </layout>
 </window>

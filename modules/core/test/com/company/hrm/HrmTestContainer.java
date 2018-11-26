@@ -14,13 +14,14 @@ public class HrmTestContainer extends TestContainer {
     public HrmTestContainer() {
         super();
         appComponents = new ArrayList<>(Arrays.asList(
-                "com.haulmont.cuba"
+                "com.haulmont.cuba",
                 // add CUBA premium add-ons here
                 // "com.haulmont.bpm",
                 // "com.haulmont.charts",
                 // "com.haulmont.fts",
                 // "com.haulmont.reports",
                 // and custom app components if any
+                "vn.tki.erp.cambpm"
         ));
         appPropertiesFiles = Arrays.asList(
                 // List the files defined in your web.xml
